@@ -58,7 +58,7 @@ export async function PUT(request: Request) {
         return NextResponse.json({ "message": "Missing required data" })
     }
 
-    const res = await fetch(DATA_SOURCE_URL, {
+    const res = await fetch(`${DATA_SOURCE_URL}/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
