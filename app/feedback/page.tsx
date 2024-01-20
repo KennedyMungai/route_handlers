@@ -1,9 +1,45 @@
+'use client'
+
+import { stringify } from 'querystring'
+import { FormEvent, useState } from 'react'
+
 type Props = {}
 
+const initState = {
+	name: '',
+	email: '',
+	message: ''
+}
+
 const FeedbackPage = (props: Props) => {
+	const [data, setData] = useState(initState)
+
+	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault()
+		console.log(console.log(stringify(data)))
+
+		const { name, email, message } = data
+
+		const res = await fetch('http://localhost:3000/api/feedback', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				name,
+				email,
+				message
+			})
+		})
+
+		const result = res.json()
+
+		console.log(result)
+	}
+
 	return (
 		<div className='min-h-screen flex items-center justify-center bg-slate-500'>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<h3 className='text-2xl text-slate-100'>Contact Us</h3>
 				<div>
 					<p>Name:</p>
