@@ -46,6 +46,7 @@ const FeedbackPage = (props: Props) => {
 					<input
 						type='text'
 						placeholder='Name'
+                        value={data.name}
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
@@ -54,6 +55,7 @@ const FeedbackPage = (props: Props) => {
 					<input
 						type='text'
 						placeholder='Email'
+                        value={data.email}
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
@@ -62,6 +64,7 @@ const FeedbackPage = (props: Props) => {
 					<input
 						type='text'
 						placeholder='Message'
+                        value={data.message}
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
