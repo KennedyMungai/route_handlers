@@ -4,7 +4,7 @@ const FeedbackPage = (props: Props) => {
 	return (
 		<div className='min-h-screen flex items-center justify-center bg-slate-500'>
 			<form>
-				<h3 className='text-2xl'>Contact Us</h3>
+				<h3 className='text-2xl text-slate-100'>Contact Us</h3>
 				<div>
 					<p>Name:</p>
 					<input
@@ -29,6 +29,7 @@ const FeedbackPage = (props: Props) => {
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
+                <button type="submit" className="p-3 my-3 bg-slate-800 rounded-md">Submit</button>
 			</form>
 		</div>
 	)
