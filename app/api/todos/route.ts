@@ -26,4 +26,6 @@ export async function DELETE(request: Request) {
             'API-Key': API_Key
         }
     })
+
+    return NextResponse.json({ 'message': `Todo with ${id} deleted` })
 }
