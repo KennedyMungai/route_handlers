@@ -67,7 +67,7 @@ export async function PUT(request: Request) {
         body: JSON.stringify({ userId, title, completed, id })
     })
 
-    const newTodo: Todo = await res.json()
+    const updatedTodo: Todo = await res.json()
 
-    return NextResponse.json(newTodo)
+    return NextResponse.json(updatedTodo)
 }
