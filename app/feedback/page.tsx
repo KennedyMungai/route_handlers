@@ -47,6 +47,7 @@ const FeedbackPage = (props: Props) => {
 						type='text'
 						placeholder='Name'
                         value={data.name}
+						onChange={(e) => setData({ ...data, name: e.target.value })}
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
@@ -56,6 +57,7 @@ const FeedbackPage = (props: Props) => {
 						type='text'
 						placeholder='Email'
                         value={data.email}
+						onChange={(e) => setData({ ...data, email: e.target.value })}
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
@@ -65,6 +67,7 @@ const FeedbackPage = (props: Props) => {
 						type='text'
 						placeholder='Message'
                         value={data.message}
+						onChange={(e) => setData({ ...data, message: e.target.value })}
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
