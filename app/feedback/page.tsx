@@ -29,7 +29,12 @@ const FeedbackPage = (props: Props) => {
 						className='p-2 rounded-md focus:outline-none'
 					/>
 				</div>
-                <button type="submit" className="p-3 my-3 bg-slate-800 rounded-md">Submit</button>
+				<button
+					type='submit'
+					className='p-3 my-3 bg-slate-800 rounded-md'
+				>
+					Submit
+				</button>
 			</form>
 		</div>
 	)
