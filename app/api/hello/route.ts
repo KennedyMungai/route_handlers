@@ -1,5 +1,9 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from "next/server"
+import { limiter } from "../config/limiter"
+
 
 export async function GET() {
-    return NextResponse.json({"message": "Hello, NextJS!!!"})
+    const remaining = await limiter.removeTokens(1)
+    console.log("Remaining", remaining)
+    return NextResponse.json({ "message": "Hello, NextJS!!!" })
 }
