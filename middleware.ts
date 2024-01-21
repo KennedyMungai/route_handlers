@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server"
 
+
+const allowedOrigins = process.env.NODE_ENV === 'production' ? ['https://www.site-name.com', 'https://site-name.com'] : ['http://localhost:3000', 'https://google.com']
+
+
 export function middleware(request: Request) {
     console.log("Middleware!!!")
     console.log(request.method)
